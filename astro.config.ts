@@ -12,7 +12,7 @@ export default defineConfig({
       : 'https://localhost:3000/',
   base:
     process.env.VERCEL_ENV === 'production'
-      ? '/SCnPRnCICD/'
+      ? 'SCnPRnCICD'
       : '/',
   trailingSlash: 'ignore',
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
