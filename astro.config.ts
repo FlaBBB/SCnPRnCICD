@@ -6,11 +6,10 @@ export default defineConfig({
   // used to generate images
   site:
     process.env.VERCEL_ENV === 'production'
-      ? 'https://flabbb.github.io/'
+      ? 'https://flabbb.github.io/SCnPRnCICD/'
       : process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}/`
       : 'https://localhost:3000/',
-  base: 'SCnPRnCICD',
   trailingSlash: 'ignore',
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
