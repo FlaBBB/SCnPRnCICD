@@ -1,4 +1,6 @@
 ---
+import { getPath } from '../../utils/path';
+
 interface Props {
   content: any;
 }
@@ -7,7 +9,7 @@ const { content } = Astro.props;
 ---
 
 <article class='prose-slate w-sm md:w-prose md:prose poppins'>
-  <a href='/' title='Back to home'>&larr; Back to home</a>
+  <a href={getPath('/')} title='Back to home'>&larr; Back to home</a>
   <p class='text-slate text-sm md:text-base'>
     Published on {content.pubDate} by {content.author}
   </p>

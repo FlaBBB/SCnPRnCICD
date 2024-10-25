@@ -4,6 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 import Layout from '@layouts/Default.astro';
 import BlogList from '@components/blog/BlogList.astro';
 import { Button } from '@eliancodes/brutal-ui';
+import { getPath } from '../../utils/path';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog').then((collection) =>
@@ -46,7 +47,7 @@ const { tag, blogposts } = Astro.props;
 >
   <main class='p-6 bg-purple grid gap-4'>
     <div>
-      <Button href='/'>&larr; Back to Home</Button>
+      <Button href={getPath('/')}>&larr; Back to Home</Button>
     </div>
     <BlogList posts={blogposts} />
   </main>
