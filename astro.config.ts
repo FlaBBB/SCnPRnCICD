@@ -10,10 +10,7 @@ export default defineConfig({
       : process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}/`
       : 'https://localhost:3000/',
-  base:
-    process.env.VERCEL_ENV === 'production'
-      ? 'SCnPRnCICD'
-      : '/',
+  base: 'SCnPRnCICD',
   trailingSlash: 'ignore',
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
