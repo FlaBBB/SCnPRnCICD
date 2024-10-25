@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BlogList from '../blog/BlogList.astro';
 import { Card } from '@eliancodes/brutal-ui';
 import { Button } from '@eliancodes/brutal-ui';
-import { getPath } from '../../utils/path';
 
 interface Props {
   count?: number;
@@ -23,10 +22,10 @@ const posts = await getCollection('blog').then((posts) =>
         Recent Blog
       </h2>
       <div class='hidden md:block'>
-        <Button href={getPath('/blog')}>Go to blog &rarr;</Button>
+        <Button href={'/blog'}>Go to blog &rarr;</Button>
       </div>
       <div class='block md:hidden'>
-        <Button href={getPath('/blog')}>to blog</Button>
+        <Button href={'/blog'}>to blog</Button>
       </div>
     </div>
     <BlogList posts={posts} />
